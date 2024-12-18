@@ -1,0 +1,26 @@
+---
+site_name: ScatheRPG
+site_url: https://ScatheRPG.github.io
+theme:
+  name: material
+  palette:
+    scheme: slate
+  primary: red
+  accent: gold
+  features:
+    - navigation.footer
+  logo: https://avatars.githubusercontent.com/u/191635067
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://www.youtube.com/@scatheRPG
+    - icon: simple/instagram
+      link: https://instagram.com/scatheRPG
+    - icon: simple/bluesky
+      link: https://bsky.app/profile/scatherpg.aen.quest
