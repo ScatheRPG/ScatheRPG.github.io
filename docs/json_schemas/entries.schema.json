@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scathe.com/entries.schema.json",
+  "title": "Entries",
+  "description": "A generic object for representing information",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the entry"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of the entry, usually 'entries'"
+    },
+    "entries": {
+      "type": "array",
+      "description": "A list of entries, either strings or other 'entries' objects"
+    }
+  }
+}
