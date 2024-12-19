@@ -1,0 +1,27 @@
+---
+
+extends:
+  - '@commitlint/config-conventional'
+rules:
+  header-max-length: [1, 'always', 72]
+  type-enum:
+    - 2
+    - always
+    - - core
+      - chore
+      - ci
+      - feat
+      - fix
+      - docs
+      - style
+      - refactor
+      - revert
+help: |
+  **Possible types**:
+  `core`:    Change to the build process, tools, etc
+  `chore`:   Misc administrative gruntwork
+  `ci`:      Changes to any CI-related configuration and process
+  `feat`:    Add new content or features
+  `fix`:     Fix problems with existing content or features
+  `docs`:    Adds or alters documentation about this repository (not the contents of the vault)
+  `style`:   Improves formatting, white-space, etc but no content changes

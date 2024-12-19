@@ -1,0 +1,48 @@
+---
+
+name: PR
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  pull-requests: read
+  contents: read
+  checks: read
+  statuses: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # https://stackoverflow.com/a/6802238
+          fetch-depth: 2147483647
+      - uses: siderolabs/conform@fadbbb45f38681d50593a48fb26e48b45f7da70a
+        name: Conform
+        with:
+          token: ${{ secrets.GITHUB_TOKEN || github.token }}
+      - uses: amannn/action-semantic-pull-request@v5.5.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN || github.token }}
+        with:
+          types: |
+            core
+            fix
+            feat
+            docs
+            ci
+            chore
+            style
+            refactor
+            test
+          requireScope: false
+          subjectPattern: ^[a-z].+$
+          subjectPatternError: |
+            The subject "{subject}" found in the pull request title "{title}"
+            didn't match the configured pattern. Please ensure that the subject
+            starts with a lowercase character.
+          # We test commits with conform so we don't need this
+          validateSingleCommit: false

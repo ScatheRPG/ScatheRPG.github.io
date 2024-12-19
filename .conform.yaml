@@ -1,0 +1,32 @@
+---
+policies:
+  - type: commit
+    spec:
+      header:
+        length: 89
+        imperative: true
+        case: lower
+        invalidLastCharacters: .
+      body:
+        required: false
+      dco: false
+      gpg:
+        required: false
+        identity:
+          gitHubOrganization: ScatheRPG
+      spellcheck:
+        locale: US
+      maximumOfOneCommit: false
+      conventional:
+        types:
+          - core
+          - chore
+          - ci
+          - feat
+          - docs
+          - refactor
+          - style
+          - revert
+        scopes:
+          - .*
+        descriptionLength: 72
