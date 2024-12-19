@@ -5,8 +5,8 @@ theme:
   name: material
   palette:
     scheme: slate
-  primary: red
-  accent: gold
+    primary: red
+    accent: yellow
   features:
     - navigation.footer
   logo: https://avatars.githubusercontent.com/u/191635067
