@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://scathe.com/entries.schema.json",
+  "$id": "https://ScatheRPG.github.io/json_schemas/entries.schema.json",
   "title": "Entries",
   "description": "A generic object for representing information",
   "type": "object",

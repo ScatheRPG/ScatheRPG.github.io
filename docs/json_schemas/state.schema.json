@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://scathe.com/state.schema.json",
+  "$id": "https://ScatheRPG.github.io/json_schemas/state.schema.json",
   "title": "State",
   "description": "A state that an entity might be in",
   "type": "object",
@@ -20,7 +20,7 @@
     "entries": {
       "type": "array",
       "items": {
-        "$ref": "https://scathe.com/entries.schema.json"
+        "$ref": "https://ScatheRPG.github.io/json_schemas/entries.schema.json"
       }
     }
   }
