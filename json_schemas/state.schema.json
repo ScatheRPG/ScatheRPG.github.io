@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ScatheRPG.github.io/json_schemas/state.schema.json",
+  "title": "State",
+  "description": "A state that an entity might be in",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the state"
+    },
+    "source": {
+      "type": "string",
+      "description": "The sourcebook where this state is defined"
+    },
+    "page": {
+      "type": "number",
+      "description": "The page number in the sourcebook where the state is defined"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ScatheRPG.github.io/json_schemas/entries.schema.json"
+      }
+    }
+  }
+}
